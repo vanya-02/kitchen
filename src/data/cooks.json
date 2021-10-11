@@ -4,5 +4,11 @@
     "proficiency":3,
     "name":"Gordon Ramsay",
     "catch-phrase":"Hey, panini head, are you listening to me?"
+  },
+  {
+    "rank":4,
+    "proficiency":99,
+    "name":"Bunica",
+    "catch-phrase":"Hai ca am intins masa!"
   }
 ]
