@@ -16,9 +16,11 @@ def order():
 	# Parse and add incoming POST orders to order_list
 	data = request.json
 	order_list.append(data)
-	# print('test', flush=True)
+	print('Received order:', flush=False)
+	print(data, flush=False)
 	s = json.dumps(cook.prepare_oder(order_list.pop()))
 	requests.post('http://localhost:5050/distribution', json=s)
+
 
 	return s
 
