@@ -1,6 +1,6 @@
 import cook
 import json
-# import requests
+import requests
 from flask import Flask, request
 
 kitchen = Flask(__name__)
@@ -16,9 +16,9 @@ def order():
 	# Parse and add incoming POST orders to order_list
 	data = request.json
 	order_list.append(data)
-
+	# print('test', flush=True)
 	s = json.dumps(cook.prepare_oder(order_list.pop()))
-	# requests.post('127.0.0.1:5000', s)
+	requests.post('http://localhost:5050/distribution', json=s)
 
 	return s
 
