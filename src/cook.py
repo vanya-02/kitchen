@@ -23,8 +23,8 @@ def prepare_food(food_id):
 
 
 # returns ready order /distribution json POST payload
-def prepare_oder(order_id, order_body):
-	order_body['order_id'] = order_id
+def prepare_oder(order_body):
+	# order_body['order_id'] = order_id
 	order_body['cooking_time'] = 0
 	order_body['cooking_details'] = []
 	for item in order_body['items']:
