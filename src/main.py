@@ -1,6 +1,6 @@
 import cook
 import json
-
+# import requests
 from flask import Flask, request
 
 kitchen = Flask(__name__)
@@ -17,7 +17,10 @@ def order():
 	data = request.json
 	order_list.append(data)
 
-	return json.dumps(order_list)
+	s = json.dumps(cook.prepare_oder(order_list.pop()))
+	# requests.post('127.0.0.1:5000', s)
+
+	return s
 
 
 if __name__ == '__main__':
