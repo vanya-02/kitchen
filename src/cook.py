@@ -3,7 +3,8 @@ Get food-order for processing
 Update prepared food to /distribution (dining hall POST endpoint)
 Optional - use cooking aparatuses
 '''
-import json, time
+import json
+import time
 
 # f = open('./data/cooks.json', 'r')
 cook_list = json.load(open('./data/cooks.json', 'r'))
