@@ -19,7 +19,7 @@ def prepare_food(food_id):
 	food = food_list[food_id - 1]
 	time.sleep(food['preparation-time'] * TIME_UNIT)
 
-	return cook['rank'], (time.time() - start) * TIME_UNIT/1
+	return cook['rank'], (time.time() - start) * 1/TIME_UNIT
 
 
 # returns ready order /distribution json POST payload
