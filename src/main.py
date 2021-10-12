@@ -1,5 +1,3 @@
-x = open('./data/cooks.json', 'r')
-
 import cook
 import json
 
