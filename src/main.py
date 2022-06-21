@@ -5,7 +5,9 @@ from flask import Flask, request
 
 kitchen = Flask(__name__)
 
-order_list = []
+
+from cook import kitchen_obj
+
 
 
 # 1. Add new order to order list
@@ -13,17 +15,16 @@ order_list = []
 # 3. Register receive time and prepared order time
 @kitchen.route('/order', methods=['POST'])
 def order():
-	# Parse and add incoming POST orders to order_list
 	data = request.json
-	order_list.append(data)
-	print('Received order:', flush=False)
-	print(data, flush=False)
-	r_order = json.dumps(cook.prepare_oder(order_list.pop()))
+	print('\nReceived order:', flush=False)
+	print(data,'\n', flush=False)
+	# r_order = json.dumps(cook.prepare_oder(order_list.pop()))
 	print('Sending prepared ready order back:')
-	print(r_order, flush=False)
-	requests.post('http://localhost:5050/distribution', json=r_order)
-
-	return r_order
+	# print(r_order, flush=False)
+	# requests.post('http://localhost:5050/distribution', json=r_order)
+	_ = kitchen_obj.prepare_order(data)
+	print(_, flush=False)
+	return _
 
 
 # import time

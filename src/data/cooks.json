@@ -1,13 +1,13 @@
 [
   {
     "rank":1,
-    "proficiency":0.2,
+    "proficiency":1,
     "name":"Angela Gonta",
     "catch-phrase":"Tu precis ai BMW?"
   },
   {
     "rank":2,
-    "proficiency":2.2,
+    "proficiency":2,
     "name":"Jamie Oliver",
     "catch-phrase":"Pukka!"
   },
@@ -18,8 +18,8 @@
     "catch-phrase":"Hey, panini head, are you listening to me?"
   },
   {
-    "rank":4,
-    "proficiency":99,
+    "rank":3,
+    "proficiency":3,
     "name":"Bunica",
     "catch-phrase":"Hai ca am intins masa!"
   }
